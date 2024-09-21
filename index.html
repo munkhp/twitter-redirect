@@ -15,6 +15,7 @@
     <header>
         <div class="inner">
             <h1>React Native X Login</h1>
+            <p id="twit-url"></p>
             <h2>Redirecting to your deep link...</h2>
         </div>
     </header>
@@ -38,7 +39,7 @@
         }
         return query_string;
       }
-
+      document.getElementById('myParagraph').textContent = window.location.href;
       var query = window.location.search.substring(1);
       var qs = parse_query_string(query);
       if (qs.redirect_url) {
